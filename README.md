@@ -1,2 +1,2 @@
 # IndigoAirlinesRoblox
-Indigo Airlines Roblox
+IndigoAirlinesRoblox
