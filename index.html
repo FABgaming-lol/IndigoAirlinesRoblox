@@ -19,32 +19,17 @@
         <div class="search-box">
             <h2>Book Your Flight</h2>
             <form id="flight-form">
-                <label for="from">From:</label>
-                <input type="text" id="from" placeholder="City or Airport" required>
+    <input type="text" id="from" placeholder="From" required>
+    <input type="text" id="to" placeholder="To" required>
+    <input type="date" id="departure" placeholder="Departure Date" required>
+    <input type="date" id="return" placeholder="Return Date" required>
+    <input type="number" id="passengers" placeholder="Number of Passengers" required>
+    <input type="email" id="email" placeholder="Email Address" required>
+    <button type="submit">Submit</button>
+</form>
 
-                <label for="to">To:</label>
-                <input type="text" id="to" placeholder="City or Airport" required>
+<p id="message"></p> <!-- Confirmation/Error message here -->
 
-                <label for="departure">Departure Date:</label>
-                <input type="date" id="departure" required>
-
-                <label for="return">Return Date (optional):</label>
-                <input type="date" id="return">
-
-                <label for="passengers">Passengers:</label>
-                <select id="passengers" required>
-                    <option value="1">1 Passenger</option>
-                    <option value="2">2 Passengers</option>
-                    <option value="3">3 Passengers</option>
-                    <option value="4">4+ Passengers</option>
-                </select>
-
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" placeholder="Your email address" required>
-
-                <button type="submit">Search Flights</button>
-            </form>
-            <p id="message" class="message"></p>
         </div>
     </div>
     <footer>
