@@ -11,7 +11,7 @@ document.getElementById("flight-form").addEventListener("submit", async function
     };
 
     try {
-        const response = await fetch("YOUR_GOOGLE_SHEETS_WEB_APP_URL", {
+        const response = await fetch("https://script.google.com/macros/s/AKfycbzg72_hJW-FJMuUR19Knpwydsc_UlJldjwIhwPwttV6oia87GzWHT8m-5YJKDMXVTB8nQ/exec", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(formData),
