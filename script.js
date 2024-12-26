@@ -1,21 +1,26 @@
-document.getElementById("flight-form").addEventListener("submit", function(event) {
+document.getElementById("flight-form").addEventListener("submit", async function(event) {
     event.preventDefault();
 
-    // Get values from form fields
-    const from = document.getElementById("from").value;
-    const to = document.getElementById("to").value;
-    const departure = document.getElementById("departure").value;
-    const returnDate = document.getElementById("return").value;
-    const passengers = document.getElementById("passengers").value;
-    const email = document.getElementById("email").value;
+    const formData = {
+        from: document.getElementById("from").value,
+        to: document.getElementById("to").value,
+        departure: document.getElementById("departure").value,
+        return: document.getElementById("return").value,
+        passengers: document.getElementById("passengers").value,
+        email: document.getElementById("email").value,
+    };
 
-    // Validate fields
-    if (from && to && departure && passengers && email) {
-        // Simulate sending ticket information to the email
-        document.getElementById("message").textContent = `Tickets from ${from} to ${to} for ${passengers} passenger(s) on ${departure} have been sent to ${email}.`;
-        document.getElementById("message").style.color = "green";
-    } else {
-        document.getElementById("message").textContent = "Please fill all required fields!";
-        document.getElementById("message").style.color = "red";
+    try {
+        const response = await fetch("YOUR_GOOGLE_SHEETS_WEB_APP_URL", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData),
+        });
+
+        const data = await response.json();
+        document.getElementById("message").textContent = data.message;
+    } catch (error) {
+        document.getElementById("message").textContent = "Error submitting the form!";
+        console.error(error);
     }
 });
