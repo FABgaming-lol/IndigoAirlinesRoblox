@@ -1,10 +1,10 @@
 /* General styles */
 body {
     font-family: Arial, sans-serif;
-    background: url('./images/background.jpg') no-repeat center center fixed;
-    background-size: 1920px 1080px; /* Fixed size for background */
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;  /* Ensures the image covers the entire screen */
     color: white;
-    height: 100vh; /* Full viewport height */
+    height: 100vh;
     margin: 0;
 }
 
