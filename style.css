@@ -1,21 +1,31 @@
 /* General styles */
 body {
     font-family: Arial, sans-serif;
-    background: url('.images/background.jpg') no-repeat center center fixed;
+    background: url('./images/background.jpg') no-repeat center center fixed;
     background-size: cover;
-    margin: 0;
     color: white;
-    line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
-/* Header */
+/* Header styles */
 header {
     text-align: center;
     background: rgba(0, 0, 0, 0.5);
     padding: 20px;
 }
 
-/* Navigation */
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2em;
+    margin: 10px 0 0;
+}
+
+/* Navigation styles */
 nav {
     text-align: center;
     margin: 20px 0;
@@ -24,33 +34,37 @@ nav {
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
     margin: 0 15px;
 }
 
 nav ul li a {
-    color: white;
     text-decoration: none;
+    color: #ffd700;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
 }
 
 /* Section styles */
 section {
+    margin: 20px auto;
     padding: 20px;
     background: rgba(0, 0, 0, 0.6);
-    margin: 20px auto;
-    width: 80%;
     border-radius: 10px;
+    width: 80%;
 }
 
-/* Link styles */
-a {
-    color: #ffd700;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
+/* Footer styles */
+footer {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 0.9em;
+    color: #ccc;
 }
