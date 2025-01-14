@@ -1,7 +1,7 @@
 /* General styles */
 body {
     font-family: Arial, sans-serif;
-    background: url('background.jpg') no-repeat center center fixed;
+    background: url('indigo1.jpg') no-repeat center center fixed;
     background-size: cover;  /* Ensures the image covers the entire screen */
     color: white;
     height: 100vh;
